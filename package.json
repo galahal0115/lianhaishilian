@@ -1,0 +1,45 @@
+{
+  "name": "lianhaishilian-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "恋还是练 Windows desktop game",
+  "scripts": {
+    "stage": "node desktop/stage.cjs",
+    "dist": "npm run stage && electron-builder --win nsis --x64",
+    "start": "npm run stage && electron build/app",
+    "test": "node checks/rewards-balance.cjs && node checks/audio-lifecycle.cjs && node checks/q-rules.cjs && node checks/q-expanded.cjs && node checks/shield-strike-rules.cjs"
+  },
+  "build": {
+    "appId": "io.hakeshuishui.lianhaishilian",
+    "productName": "恋还是练",
+    "directories": {
+      "app": "build/app",
+      "output": "release"
+    },
+    "asar": true,
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": false,
+      "installerLanguages": [
+        "zh_CN"
+      ],
+      "language": "2052",
+      "artifactName": "LianHaiShiLian-Setup-${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3"
+  }
+}
