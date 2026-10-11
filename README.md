@@ -12,7 +12,7 @@
 
 ## 下载与安装
 
-安装包发布后，在本仓库的 **Releases** 页面下载 `LianHaiShiLian-Setup-1.0.0.exe`。安装后使用桌面快捷方式启动，无需安装 Node.js 或浏览器。
+在本仓库的 [Releases 下载页面](https://github.com/galahal0115/lianhaishilian/releases/tag/v1.0.0) 下载 `LianHaiShiLian-Setup-1.0.0.exe`。安装后使用桌面快捷方式启动，无需安装 Node.js 或浏览器。
 
 当前构建目标是 **Windows 10/11 x64**；已在开发电脑完成安装与启动验证，尚未覆盖不同硬件的兼容性测试。安装包未进行数字签名，Windows 可能提示未知发布者。暂未提供 macOS、Linux 或手机版。
 
@@ -71,3 +71,4 @@ npm run dist
 - **OpenAI（AI 辅助）**：程序实现、部分美术生成、素材整理、测试与桌面打包。
 
 音乐、视频、参考角色及其他第三方素材不因为放入本项目而变为原创或获得再分发授权。当前素材授权情况见 [ASSETS.md](ASSETS.md)。项目暂未选择开源许可证，请勿把整个仓库视为 MIT 或其他自由授权项目。
+
